@@ -20,7 +20,7 @@ bool face_area(int d_h, int d_w, int i, int j, int h, int w) {
     return (cond1 && cond2);
 }
 
-vector<vector<vector<double> > > get_lpx_d_all(vector<vector<vector<double> > >& X, vector<vector<double> >& F,
+vector<vector<vector<double> > > calc_lpx(vector<vector<vector<double> > >& X, vector<vector<double> >& F,
     vector<vector<double> >& B, double s) {
     size_t H = X.size();
     size_t W = X[0].size();
@@ -62,7 +62,7 @@ vector<vector<size_t> > e_step(vector<vector<vector<double> > >& X, vector<vecto
     size_t N = X[0][0].size();
     size_t h = F.size();
     size_t w = F[0].size();
-    vector<vector<vector<double> > > q = get_lpx_d_all(X, F, B, s);
+    vector<vector<vector<double> > > q = calc_lpx(X, F, B, s);
     vector<vector<size_t> > best_d(2, vector<size_t>(N));
 
     vector<vector<size_t> > counts(H, vector<size_t>(W));

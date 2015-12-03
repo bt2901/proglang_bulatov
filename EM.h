@@ -3,7 +3,7 @@
 
 using std::vector;
 
-vector<vector<vector<double> > > get_lpx_d_all(vector<vector<vector<double> > >& X, vector<vector<double> >& F,
+vector<vector<vector<double> > > calc_lpx(vector<vector<vector<double> > >& X, vector<vector<double> >& F,
     vector<vector<double> >& B, double s);
 
 vector<vector<size_t> > e_step(vector<vector<vector<double> > >& X, vector<vector<double> >& F,
